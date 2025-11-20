@@ -20,7 +20,7 @@ class MyVideoCapture:
             PCによってはカメラIDが0ではなく1で動作する場合があるため、
             必要に応じて cv2.VideoCapture(1) に変更すること。
         """
-        self.cap: cv2.VideoCapture = cv2.VideoCapture(0)
+        self.cap: cv2.VideoCapture = cv2.VideoCapture(1)
         self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
         self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
         self.captured_img: np.ndarray | None = None
